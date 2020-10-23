@@ -1,0 +1,15 @@
+#flexed {
+  display: flex;
+  justify-content: center;
+}
+#gridContainer {
+  display: grid;
+  gap: 10px;
+  max-width: 205px;
+}
+p {
+  font-size: 13px;
+}
+html {
+  background-color: green;
+}
