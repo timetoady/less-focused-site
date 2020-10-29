@@ -15,12 +15,15 @@ body {
   margin: 0 auto;
   min-height: 100vh;
   display: grid;
-  grid-template-rows: auto 1fr auto !important;
+  grid-template-rows: auto 1fr auto;
 }
 
 main {
   position: relative;
-  
+  margin-bottom: 2rem;
+  @media screen and (@midSize) {
+    margin-bottom: 10rem;
+  }
 }
 
 header {
@@ -107,7 +110,7 @@ header {
   padding: 0 0.5rem 0 0.5rem;
   @media screen and(@midSize) {
     grid-template-columns: 1fr;
-    height: 300px;
+    height: 100vh;
   }
   .picGrid {
     height: 205px;
@@ -126,9 +129,9 @@ header {
   }
 }
 
-// #contentrap {
-//   padding-bottom: 2.5rem;    /* Footer height */
-// }
+#contenWrap {
+  padding-bottom: 2.5rem;
+}
 
 footer {
   text-align: center;
@@ -136,9 +139,12 @@ footer {
   background-color: @mainBackgroundColor1;
   font-size: 2rem;
   padding: 10px;
-  // position: absolute;
   width: 100%;
-  // bottom: 0;
+
+  @media screen and (@midSize) {
+    // bottom: 0;
+    // position: fixed;
+  }
   :hover {
     color: @menuHoverColor;
   }
