@@ -1,12 +1,18 @@
 @import "../less/variables.less";
 @import "../less/mixins.less";
 
+* {
+    margin: 0;
+    padding: 0;
+  }
+
 p {
   font-size: @commonFontSize;
 }
 
-html {
-  background-color: #fff;
+body {
+  max-width: 1150px;
+  margin: 0 auto;
 }
 
 header {
@@ -18,7 +24,7 @@ header {
   img {
     max-width: 30vw;
     @media screen and (@midSize) {
-      max-width: 90vw;
+      max-width: 90%;
     }
   }
 }
@@ -30,12 +36,16 @@ header {
   }
 }
 
+#logoDiv{
+    max-width: 60%;
+}
+
 #searchBox {
   #boxes;
   margin-left: -5px;
   margin-top: 1rem;
   @media screen and (@midSize) {
-    width: 85%;
+    width: 83%;
     margin: 0;
     padding-left: 2.5rem;
   }
