@@ -26,6 +26,20 @@
   
 }
 
+#actionButton{
+  text-align: center;
+  background-color: @accentColor1;
+  color: @accentFontColor1;
+  display: block;
+  padding: .5rem;
+  cursor: pointer;
+  border: none;
+  font-family: @menuFont;
+  :hover{
+    #hoverObject;
+  }
+}
+
 #navLiDressing {
   border-left: none;
   border-right: 1px solid;
@@ -73,4 +87,7 @@
 #gridImages{
   background-repeat: no-repeat;
   background-size: cover;
+  @media screen and (@smallSize){
+    background-size: cover;
+  }
 }

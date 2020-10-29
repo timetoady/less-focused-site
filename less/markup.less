@@ -13,9 +13,10 @@ p {
 body {
   max-width: 1150px;
   margin: 0 auto;
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  //min-height: 100vh;
+  @media screen and (@smallSize) {
+    //grid-template-rows: 1fr;
+  }
 }
 
 main {
@@ -42,8 +43,8 @@ header {
 
 @media screen and (@midSize) {
   #search {
-    width: 100%;
-    margin: 0 auto;
+    width: 90%;
+    //margin: 0 auto;
   }
 }
 
@@ -73,7 +74,7 @@ header {
   margin-top: 1rem;
   @media screen and (@midSize) {
     margin: 0;
-    position: fixed;
+    position: absolute;
   }
 }
 
@@ -100,37 +101,167 @@ header {
   }
 }
 
+#action {
+  margin-top: 20px;
+  transition: all 1s .2s ease-in-out;
+  :hover{
+    background-color: lighten(@menuHoverColor, 5%);
+    transition: ease-in-out 1s .2s;
+    transform: scale(1.2)
+  }
+  
+}
+
+.callToAction {
+  #actionButton;
+  margin: 0 auto;
+}
+
 .homeIcon {
   font-size: 1rem;
 }
 
 #gridSection {
   #gridContainer;
+
+  p {
+    color: white;
+    font-weight: 600;
+    font-size: 1.3rem;
+    font-family: @commonFont;
+    text-align: center;
+  }
   margin-top: 2rem;
   padding: 0 0.5rem 0 0.5rem;
   @media screen and(@midSize) {
     grid-template-columns: 1fr;
     height: 100vh;
+    margin-top: 10px;
   }
   .picGrid {
-    height: 205px;
+    height: 8rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and(@smallSize) {
+      height: 80vh;
+    }
   }
   #pic1 {
-    background-image: url("../img/spa1.jpg");
+    background-image: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.09) 1%,
+        rgba(0, 0, 0, 0.12) 12%,
+        rgba(0, 0, 0, 0.16) 25%,
+        rgba(0, 0, 0, 0.2) 39%,
+        rgba(0, 0, 0, 0.24) 50%,
+        rgba(0, 0, 0, 0.24) 51%,
+        rgba(17, 17, 17, 0.27) 60%,
+        rgba(43, 43, 43, 0.32) 76%,
+        rgba(28, 28, 28, 0.37) 91%,
+        rgba(19, 19, 19, 0.4) 100%
+      ),
+      url("../img/spa1.jpg");
     #gridImages;
   }
   #pic2 {
-    background-image: url("/img/spa2.jpg");
+    background-image: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.09) 1%,
+        rgba(0, 0, 0, 0.12) 12%,
+        rgba(0, 0, 0, 0.16) 25%,
+        rgba(0, 0, 0, 0.2) 39%,
+        rgba(0, 0, 0, 0.24) 50%,
+        rgba(0, 0, 0, 0.24) 51%,
+        rgba(17, 17, 17, 0.27) 60%,
+        rgba(43, 43, 43, 0.32) 76%,
+        rgba(28, 28, 28, 0.37) 91%,
+        rgba(19, 19, 19, 0.4) 100%
+      ),
+      url("/img/spa2.jpg");
     #gridImages;
   }
   #pic3 {
-    background-image: url("../img/spa4.jpg");
+    background-image: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.09) 1%,
+        rgba(0, 0, 0, 0.12) 12%,
+        rgba(0, 0, 0, 0.16) 25%,
+        rgba(0, 0, 0, 0.2) 39%,
+        rgba(0, 0, 0, 0.24) 50%,
+        rgba(0, 0, 0, 0.24) 51%,
+        rgba(17, 17, 17, 0.27) 60%,
+        rgba(43, 43, 43, 0.32) 76%,
+        rgba(28, 28, 28, 0.37) 91%,
+        rgba(19, 19, 19, 0.4) 100%
+      ),
+      url("../img/spa3.jpg");
     #gridImages;
+  }
+  @media screen and(@smallSize) {
+    #pic1 {
+      background-image: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.09) 1%,
+          rgba(0, 0, 0, 0.12) 12%,
+          rgba(0, 0, 0, 0.16) 25%,
+          rgba(0, 0, 0, 0.2) 39%,
+          rgba(0, 0, 0, 0.24) 50%,
+          rgba(0, 0, 0, 0.24) 51%,
+          rgba(17, 17, 17, 0.27) 60%,
+          rgba(43, 43, 43, 0.32) 76%,
+          rgba(28, 28, 28, 0.37) 91%,
+          rgba(19, 19, 19, 0.4) 100%
+        ),
+        url("../img/spa1mobile.jpg");
+    }
+    #pic2 {
+      background-image: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.09) 1%,
+          rgba(0, 0, 0, 0.12) 12%,
+          rgba(0, 0, 0, 0.16) 25%,
+          rgba(0, 0, 0, 0.2) 39%,
+          rgba(0, 0, 0, 0.24) 50%,
+          rgba(0, 0, 0, 0.24) 51%,
+          rgba(17, 17, 17, 0.27) 60%,
+          rgba(43, 43, 43, 0.32) 76%,
+          rgba(28, 28, 28, 0.37) 91%,
+          rgba(19, 19, 19, 0.4) 100%
+        ),
+        url("/img/spa2mobile.jpg");
+    }
+    #pic3 {
+      background-image: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.09) 1%,
+          rgba(0, 0, 0, 0.12) 12%,
+          rgba(0, 0, 0, 0.16) 25%,
+          rgba(0, 0, 0, 0.2) 39%,
+          rgba(0, 0, 0, 0.24) 50%,
+          rgba(0, 0, 0, 0.24) 51%,
+          rgba(17, 17, 17, 0.27) 60%,
+          rgba(43, 43, 43, 0.32) 76%,
+          rgba(28, 28, 28, 0.37) 91%,
+          rgba(19, 19, 19, 0.4) 100%
+        ),
+        url("../img/spa3mobile.jpg");
+    }
   }
 }
 
-#contenWrap {
-  padding-bottom: 2.5rem;
+#contentWrap {
+  //padding-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 footer {
@@ -139,11 +270,11 @@ footer {
   background-color: @mainBackgroundColor1;
   font-size: 2rem;
   padding: 10px;
-  width: 100%;
-
+  max-width: 100%;
   @media screen and (@midSize) {
-    // bottom: 0;
-    // position: fixed;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
   }
   :hover {
     color: @menuHoverColor;
