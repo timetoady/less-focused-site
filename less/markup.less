@@ -257,6 +257,21 @@ header {
   justify-content: space-evenly;
 }
 
+#details{
+
+  h2{font-family: @titlesFont;}
+  p{font-family: @commonFont;}
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  padding: 1rem;
+  max-width: 50%;
+  @media screen and (@smallSize) {
+    display: none;
+  }
+}
+
 footer {
   text-align: center;
   margin-top: auto;
