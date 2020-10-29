@@ -1,9 +1,0 @@
-#flexed {
-  display: flex;
-  justify-content: center;
-}
-#gridContainer {
-  display: grid;
-  gap: 10px;
-  max-width: 205px;
-}

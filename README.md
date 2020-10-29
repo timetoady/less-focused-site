@@ -4,7 +4,7 @@
 See https://tutorialzine.com/2015/07/learn-less-in-10-minutes-or-less and http://lesscss.org/ for info.
 
 ### To compile less to CSS in CLI
-lessc style.less > styles.css
+lessc ./less/style.less > ./css/style.css
 
 ### Turn in link:
 https://uvu.instructure.com/courses/506550/assignments/4876475?module_item_id=7156133

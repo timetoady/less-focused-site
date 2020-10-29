@@ -1,10 +1,62 @@
+@import "../less/variables.less";
+
 #flexed {
-    display: flex;
-    justify-content: center;
+  display: flex;
 }
 
 #gridContainer {
-    display: grid;
-    gap: 10px;
-    max-width: 205px; 
+  display: grid;
+  gap: 10px;
+  max-width: 205px;
 }
+
+#hoverObject{
+  background-color: @menuHoverColor;
+  color: #f2f2f2;
+  transition: 0.2s;
+}
+
+#navLiDressing {
+  border-left: none;
+  border-right: 1px solid;
+  list-style: none;
+  font-style: normal;
+  :hover {
+    #hoverObject;
+  }
+  @media screen and (@smallSize) {
+    border-right: none;
+  }
+}
+
+#navULSets {
+  background-color: @mainBackgroundColor1;
+  border-style: solid;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-left: none;
+  border-right: none;
+  border-color: rgb(95, 104, 116);
+  font-size: @menuFontSize;
+}
+
+#navAncorStyling {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: @menuFont;
+  line-height: 40px;
+  color: rgb(51, 55, 69);
+  font-weight: 700;
+  padding: 0 15px 0 15px;
+  cursor: pointer;
+  display: block;
+}
+
+#boxes{
+    height: 40px;
+    background-color: @mainBackgroundColor1;
+    border: none;
+    padding: 0 .5rem 0 .5rem;
+    outline: white !important;
+}
+

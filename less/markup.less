@@ -1,7 +1,95 @@
-p{
-    font-size: @commonFontSize;
+@import "../less/variables.less";
+@import "../less/mixins.less";
+
+p {
+  font-size: @commonFontSize;
 }
 
-html{
-    background-color: green;
+html {
+  background-color: #fff;
+}
+
+header {
+  #flexed;
+  justify-content: space-between;
+  @media screen and (@midSize) {
+    flex-direction: column;
+  }
+  img {
+    max-width: 30vw;
+    @media screen and (@midSize) {
+      max-width: 90vw;
+    }
+  }
+}
+
+@media screen and (@midSize) {
+  #search {
+    margin: 0 auto;
+  }
+}
+
+#searchBox {
+  #boxes;
+  margin-left: -5px;
+  margin-top: 1rem;
+  @media screen and (@midSize) {
+    width: 80vw;
+  }
+}
+
+#searchIcon {
+  color: white;
+}
+
+#searchButton {
+  background-color: @accentColor1;
+  cursor: pointer;
+  border: none;
+  width: 39px;
+  height: 39px;
+  margin-right: 0;
+  margin-top: 1rem;
+}
+
+#navUL {
+  #flexed;
+  #navULSets;
+  width: 100%;
+  position: relative;
+  padding-left: 0;
+  @media screen and (@smallSize) {
+    flex-direction: column;
+    border-right-color: white;
+  }
+  li {
+    #navLiDressing;
+  }
+  a {
+    #navAncorStyling;
+    @media screen and (@smallSize) {
+      font-size: 16px;
+      line-height: 40px;
+        text-align: center;
+
+    }
+  }
+}
+
+.homeIcon {
+  font-size: 1rem;
+}
+
+footer {
+  margin: 15px 0 5px 0;
+  text-align: center;
+  background-color: @mainBackgroundColor1;
+  font-size: 2rem;
+  padding: 10px;
+  :hover {
+    color: @menuHoverColor;
+  }
+  .socialIcon {
+    cursor: pointer;
+  }
 }
