@@ -2,9 +2,9 @@
 @import "../less/mixins.less";
 
 * {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+}
 
 p {
   font-size: @commonFontSize;
@@ -13,6 +13,14 @@ p {
 body {
   max-width: 1150px;
   margin: 0 auto;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto !important;
+}
+
+main {
+  position: relative;
+  
 }
 
 header {
@@ -36,8 +44,8 @@ header {
   }
 }
 
-#logoDiv{
-    max-width: 60%;
+#logoDiv {
+  max-width: 60%;
 }
 
 #searchBox {
@@ -58,13 +66,12 @@ header {
 }
 
 #searchButton {
-    #aButton;
-    margin-top: 1rem;
-    @media screen and (@midSize) {
-        margin: 0;
-        position: fixed;
-
-      }
+  #aButton;
+  margin-top: 1rem;
+  @media screen and (@midSize) {
+    margin: 0;
+    position: fixed;
+  }
 }
 
 #navUL {
@@ -85,8 +92,7 @@ header {
     @media screen and (@smallSize) {
       font-size: 16px;
       line-height: 40px;
-        text-align: center;
-
+      text-align: center;
     }
   }
 }
@@ -95,12 +101,44 @@ header {
   font-size: 1rem;
 }
 
+#gridSection {
+  #gridContainer;
+  margin-top: 2rem;
+  padding: 0 0.5rem 0 0.5rem;
+  @media screen and(@midSize) {
+    grid-template-columns: 1fr;
+    height: 300px;
+  }
+  .picGrid {
+    height: 205px;
+  }
+  #pic1 {
+    background-image: url("../img/spa1.jpg");
+    #gridImages;
+  }
+  #pic2 {
+    background-image: url("/img/spa2.jpg");
+    #gridImages;
+  }
+  #pic3 {
+    background-image: url("../img/spa4.jpg");
+    #gridImages;
+  }
+}
+
+// #contentrap {
+//   padding-bottom: 2.5rem;    /* Footer height */
+// }
+
 footer {
-  margin: 15px 0 5px 0;
   text-align: center;
+  margin-top: auto;
   background-color: @mainBackgroundColor1;
   font-size: 2rem;
   padding: 10px;
+  // position: absolute;
+  width: 100%;
+  // bottom: 0;
   :hover {
     color: @menuHoverColor;
   }
