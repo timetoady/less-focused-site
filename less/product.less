@@ -1,0 +1,64 @@
+@import "../less/variables.less";
+@import "../less/mixins.less";
+
+#gridSection2 {
+    #gridContainer;
+  
+    h1 {
+      color: white;
+      font-weight: 600;
+      font-size: 3rem;
+      @media screen and (@smallSize){
+          font-size: 1.6rem;
+      }
+      font-family: @commonFont;
+      text-align: center;
+    }
+    margin-top: 2rem;
+    padding: 0 0.5rem 0 0.5rem;
+    grid-template-columns: 1fr;
+    
+    .picGrid {
+      #picFormat;
+    }
+    #pic4 {
+        background-position: center;
+      background-image: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.1) 1%,
+          rgba(0, 0, 0, 0.2) 12%,
+          rgba(0, 0, 0, 0.3) 25%,
+          rgba(0, 0, 0, 0.35) 39%,
+          rgba(0, 0, 0, 0.43) 50%,
+          rgba(0, 0, 0, 0.44) 51%,
+          rgba(17, 17, 17, 0.5) 60%,
+          rgba(43, 43, 43, 0.52) 76%,
+          rgba(28, 28, 28, 0.64) 91%,
+          rgba(19, 19, 19, 0.7) 100%
+        ),
+        url("../img/spa4.jpg");
+      #gridImages;
+    }
+    @media screen and(@smallSize) {
+      #pic4 {
+        background-image: linear-gradient(
+            135deg,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.09) 1%,
+            rgba(0, 0, 0, 0.12) 12%,
+            rgba(0, 0, 0, 0.16) 25%,
+            rgba(0, 0, 0, 0.2) 39%,
+            rgba(0, 0, 0, 0.24) 50%,
+            rgba(0, 0, 0, 0.24) 51%,
+            rgba(17, 17, 17, 0.27) 60%,
+            rgba(43, 43, 43, 0.32) 76%,
+            rgba(28, 28, 28, 0.37) 91%,
+            rgba(19, 19, 19, 0.4) 100%
+          ),
+          url("../img/spa4mobile.jpg");
+      }
+   
+      }
+    }
+  
