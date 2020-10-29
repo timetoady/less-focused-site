@@ -25,6 +25,7 @@ header {
 
 @media screen and (@midSize) {
   #search {
+    width: 100%;
     margin: 0 auto;
   }
 }
@@ -34,16 +35,26 @@ header {
   margin-left: -5px;
   margin-top: 1rem;
   @media screen and (@midSize) {
-    width: 80vw;
+    width: 85%;
+    margin: 0;
+    padding-left: 2.5rem;
   }
 }
 
 #searchIcon {
   color: white;
+  //font-size: larger;
+  //padding-top: 5px;
 }
 
 #searchButton {
     #aButton;
+    margin-top: 1rem;
+    @media screen and (@midSize) {
+        margin: 0;
+        position: fixed;
+
+      }
 }
 
 #navUL {
