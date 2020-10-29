@@ -1,11 +1,14 @@
 # Site Design Using Less
 
 
-### Test Basics
+## Test Basics
 
 Click on "OUR TOP EXPERIENCE" to navigate to the second page. Other elements are dummy elements.
 
-### Requirements
+## Design based on: 
+https://otaku-games.com/
+
+## Requirements
 
 * [style.less](https://github.com/timetoady/less-focused-site/blob/main/less/style.less) imports info from variables, markup, mixins, and product less files.
 * [variables.less](https://github.com/timetoady/less-focused-site/blob/main/less/variables.less) maintains needed variables, including font style and size and color, as well as background and accent colors.
